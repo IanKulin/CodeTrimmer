@@ -5,33 +5,24 @@
 //  Created by Ian Bailey on 3/10/2022.
 //
 
-import XCTest
+// swiftlint:disable function_body_length
+// swiftlint:disable line_length
+// swiftlint:disable required_deinit
+// swiftlint:disable indentation_width
+
 @testable import CodeTrimmer
+import XCTest
 
 final class CodeTrimmerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    
     func testStripSpaces() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
         var testString =
         """
         single line string no spaces
         """
         var resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, testString)
-        
+
         testString =
         """
             single line 4 spaces
@@ -39,12 +30,12 @@ final class CodeTrimmerTests: XCTestCase {
         resultString = stripSpaces(testString)
         XCTAssertFalse(resultString == testString, testString)
         XCTAssertTrue(testString.dropFirst(4) == resultString, testString)
-        
+
         testString = ""
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, "Empty string")
-        XCTAssertTrue(resultString == "", "Empty string")
-        
+        XCTAssertTrue(resultString.isEmpty, "Empty string")
+
         testString =
         """
             two line 4 spaces
@@ -52,7 +43,7 @@ final class CodeTrimmerTests: XCTestCase {
         """
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "two line 4 spaces\nsecond line 4 spaces", "Two lines 4 spaces")
-        
+
         testString =
         """
             first line 4 spaces
@@ -60,7 +51,7 @@ final class CodeTrimmerTests: XCTestCase {
         """
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "first line 4 spaces\n  second line 6 spaces", "Two lines 4 & 6 spaces")
-        
+
         testString =
         """
               first line 6 spaces
@@ -68,7 +59,7 @@ final class CodeTrimmerTests: XCTestCase {
         """
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "  first line 6 spaces\nsecond line 4 spaces", "Two lines 6 & 4 spaces")
-        
+
         testString =
         """
               first line 6 spaces
@@ -77,8 +68,8 @@ final class CodeTrimmerTests: XCTestCase {
         """
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "    first line 6 spaces\n  second line 4 spaces\nthird line 2 spaces", "three lines 6 & 4 & 2 spaces")
-        
-        //test a hunk of code
+
+        // test a hunk of code
         testString =
         """
         import SwiftUI
@@ -86,7 +77,7 @@ final class CodeTrimmerTests: XCTestCase {
         struct ContentView: View {
             @State private var codeSnippet = ""
             @State private var fontSize = 12.0
-            
+
             // TODO: initialise window at a reasonable size on first run
             // TODO: add "copy all" button
             // TODO: icons
@@ -94,14 +85,14 @@ final class CodeTrimmerTests: XCTestCase {
             // TODO: Web page (Github?)
             // TODO: Animate the trimming
             // TODO: installer
-            
-            
+
+
             var displayFont: Font {
                 Font.system(size: CGFloat(fontSize),
                             design: .monospaced)
             }
-           
-            
+
+
             var body: some View {
                 Section {
                     TextEditor(text: $codeSnippet)
@@ -165,6 +156,5 @@ final class CodeTrimmerTests: XCTestCase {
         resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, "Hunk fail")
     }
-
 
 }

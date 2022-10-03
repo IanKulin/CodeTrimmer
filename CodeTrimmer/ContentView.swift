@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var codeSnippet = ""
     @State private var fontSize = 12.0
-    
+
+    // swiftlint:disable todo
     // TODO: initialise window at a reasonable size on first run
     // TODO: add "copy all" button
     // TODO: icons
@@ -18,14 +19,16 @@ struct ContentView: View {
     // TODO: Web page (Github?)
     // TODO: Animate the trimming
     // TODO: installer
-    
-    
+    // swiftlint:enable todo
+
     var displayFont: Font {
-        Font.system(size: CGFloat(fontSize),
-                    design: .monospaced)
+        Font.system(
+            size: CGFloat(fontSize),
+            design: .monospaced
+        )
     }
-   
-    
+
+
     var body: some View {
         Section {
             TextEditor(text: $codeSnippet)
@@ -40,14 +43,14 @@ struct ContentView: View {
                             minimumValueLabel:
                                 Text("A").font(.system(size: 8)),
                             maximumValueLabel:
-                                Text("A").font(.system(size: 16)))
-                        {
+                                Text("A").font(.system(size: 16))) {
                             Text("Font Size (\(Int(fontSize)))")
                         }
                         .frame(width: 150)
                         Divider()
-                        Button("Strip Spaces")
-                            { codeSnippet = stripSpaces(codeSnippet) }
+                        Button("Strip Spaces") {
+                            codeSnippet = stripSpaces(codeSnippet)
+                        }
                             .background(.white)
                             .foregroundColor(.primary)
                             .cornerRadius(5)
@@ -66,12 +69,14 @@ func stripSpaces(_ codeLines: String ) -> String {
     var minCount = Int.max
     // step though the lines and count how many spaces, save the minimum amount
     for line in lines {
+        // swiftlint:disable trailing_closure
         let leadingSpaces = line.prefix(while: { $0 == " " }).count
+        // swiftlint:enable trailing_closure
         minCount = leadingSpaces < minCount ? leadingSpaces : minCount
     }
     // step though the lines again, and trim the min amount from each line
-    for i in 0..<lines.count {
-        lines[i] = String(lines[i].dropFirst(minCount))
+    for index in 0..<lines.count {
+        lines[index] = String(lines[index].dropFirst(minCount))
     }
     // stitch it back up
     return lines.joined(separator: "\n")
