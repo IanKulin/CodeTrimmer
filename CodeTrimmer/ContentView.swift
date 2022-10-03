@@ -11,16 +11,20 @@ struct ContentView: View {
     @State private var codeSnippet = ""
     @State private var fontSize = 12.0
     
-    // TODO: initialise window at a reasonable size
+    // TODO: initialise window at a reasonable size on first run
     // TODO: add "copy all" button
     // TODO: icons
     // TODO: Help Text
     // TODO: Web page (Github?)
+    // TODO: Animate the trimming
+    // TODO: installer
+    
     
     var displayFont: Font {
         Font.system(size: CGFloat(fontSize),
                     design: .monospaced)
     }
+   
     
     var body: some View {
         Section {
@@ -36,8 +40,8 @@ struct ContentView: View {
                             minimumValueLabel:
                                 Text("A").font(.system(size: 8)),
                             maximumValueLabel:
-                                Text("A").font(.system(size: 16))
-                        ) {
+                                Text("A").font(.system(size: 16)))
+                        {
                             Text("Font Size (\(Int(fontSize)))")
                         }
                         .frame(width: 150)
