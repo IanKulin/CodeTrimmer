@@ -11,6 +11,7 @@
 		563BB6E128EA892700101AD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563BB6E028EA892700101AD2 /* ContentView.swift */; };
 		563BB6E328EA892800101AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563BB6E228EA892800101AD2 /* Assets.xcassets */; };
 		563BB6E628EA892800101AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563BB6E528EA892800101AD2 /* Preview Assets.xcassets */; };
+		56897D5028EAA785007994E2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56897D4F28EAA785007994E2 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		563BB6E228EA892800101AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		563BB6E528EA892800101AD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		563BB6E728EA892800101AD2 /* CodeTrimmer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeTrimmer.entitlements; sourceTree = "<group>"; };
+		56897D4F28EAA785007994E2 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		563BB6DD28EA892700101AD2 /* CodeTrimmer */ = {
 			isa = PBXGroup;
 			children = (
+				56897D4F28EAA785007994E2 /* Credits.rtf */,
 				563BB6DE28EA892700101AD2 /* CodeTrimmerApp.swift */,
 				563BB6E028EA892700101AD2 /* ContentView.swift */,
 				563BB6E228EA892800101AD2 /* Assets.xcassets */,
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				563BB6E628EA892800101AD2 /* Preview Assets.xcassets in Resources */,
+				56897D5028EAA785007994E2 /* Credits.rtf in Resources */,
 				563BB6E328EA892800101AD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
