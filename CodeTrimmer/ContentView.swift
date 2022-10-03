@@ -47,7 +47,7 @@ struct ContentView: View {
                         .frame(width: 150)
                         Divider()
                         Button("Strip Spaces")
-                            { codeSnippet = stripSpaces(codeSnippet)}
+                            { codeSnippet = stripSpaces(codeSnippet) }
                             .background(.white)
                             .foregroundColor(.primary)
                             .cornerRadius(5)
@@ -60,7 +60,7 @@ struct ContentView: View {
 }
 
 
-fileprivate func stripSpaces(_ codeLines: String ) -> String {
+func stripSpaces(_ codeLines: String ) -> String {
     // break into lines
     var lines = codeLines.components(separatedBy: "\n")
     var minCount = Int.max

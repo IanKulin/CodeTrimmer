@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56085B8728EB0BF800BFE6AB /* CodeTrimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56085B8628EB0BF800BFE6AB /* CodeTrimmerTests.swift */; };
 		563BB6DF28EA892700101AD2 /* CodeTrimmerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563BB6DE28EA892700101AD2 /* CodeTrimmerApp.swift */; };
 		563BB6E128EA892700101AD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563BB6E028EA892700101AD2 /* ContentView.swift */; };
 		563BB6E328EA892800101AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563BB6E228EA892800101AD2 /* Assets.xcassets */; };
@@ -14,7 +15,19 @@
 		56897D5028EAA785007994E2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56897D4F28EAA785007994E2 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		56085B8828EB0BF800BFE6AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 563BB6D328EA892700101AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 563BB6DA28EA892700101AD2;
+			remoteInfo = CodeTrimmer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		56085B8428EB0BF800BFE6AB /* CodeTrimmerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeTrimmerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56085B8628EB0BF800BFE6AB /* CodeTrimmerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTrimmerTests.swift; sourceTree = "<group>"; };
 		563BB6DB28EA892700101AD2 /* CodeTrimmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeTrimmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563BB6DE28EA892700101AD2 /* CodeTrimmerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTrimmerApp.swift; sourceTree = "<group>"; };
 		563BB6E028EA892700101AD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		56085B8128EB0BF800BFE6AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		563BB6D828EA892700101AD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56085B8528EB0BF800BFE6AB /* CodeTrimmerTests */ = {
+			isa = PBXGroup;
+			children = (
+				56085B8628EB0BF800BFE6AB /* CodeTrimmerTests.swift */,
+			);
+			path = CodeTrimmerTests;
+			sourceTree = "<group>";
+		};
 		563BB6D228EA892700101AD2 = {
 			isa = PBXGroup;
 			children = (
 				563BB6DD28EA892700101AD2 /* CodeTrimmer */,
+				56085B8528EB0BF800BFE6AB /* CodeTrimmerTests */,
 				563BB6DC28EA892700101AD2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				563BB6DB28EA892700101AD2 /* CodeTrimmer.app */,
+				56085B8428EB0BF800BFE6AB /* CodeTrimmerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +105,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		56085B8328EB0BF800BFE6AB /* CodeTrimmerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56085B8A28EB0BF800BFE6AB /* Build configuration list for PBXNativeTarget "CodeTrimmerTests" */;
+			buildPhases = (
+				56085B8028EB0BF800BFE6AB /* Sources */,
+				56085B8128EB0BF800BFE6AB /* Frameworks */,
+				56085B8228EB0BF800BFE6AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56085B8928EB0BF800BFE6AB /* PBXTargetDependency */,
+			);
+			name = CodeTrimmerTests;
+			productName = CodeTrimmerTests;
+			productReference = 56085B8428EB0BF800BFE6AB /* CodeTrimmerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		563BB6DA28EA892700101AD2 /* CodeTrimmer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 563BB6EA28EA892800101AD2 /* Build configuration list for PBXNativeTarget "CodeTrimmer" */;
@@ -102,6 +150,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					56085B8328EB0BF800BFE6AB = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 563BB6DA28EA892700101AD2;
+					};
 					563BB6DA28EA892700101AD2 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -121,11 +173,19 @@
 			projectRoot = "";
 			targets = (
 				563BB6DA28EA892700101AD2 /* CodeTrimmer */,
+				56085B8328EB0BF800BFE6AB /* CodeTrimmerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		56085B8228EB0BF800BFE6AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		563BB6D928EA892700101AD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +199,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		56085B8028EB0BF800BFE6AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56085B8728EB0BF800BFE6AB /* CodeTrimmerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		563BB6D728EA892700101AD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,7 +218,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		56085B8928EB0BF800BFE6AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 563BB6DA28EA892700101AD2 /* CodeTrimmer */;
+			targetProxy = 56085B8828EB0BF800BFE6AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		56085B8B28EB0BF800BFE6AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7VLA3V334;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.kulin-ian.CodeTrimmerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeTrimmer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CodeTrimmer";
+			};
+			name = Debug;
+		};
+		56085B8C28EB0BF800BFE6AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7VLA3V334;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.kulin-ian.CodeTrimmerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeTrimmer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CodeTrimmer";
+			};
+			name = Release;
+		};
 		563BB6E828EA892800101AD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -278,11 +388,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Trimmer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.kulin-ian.CodeTrimmer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,11 +418,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Trimmer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.kulin-ian.CodeTrimmer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +437,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		56085B8A28EB0BF800BFE6AB /* Build configuration list for PBXNativeTarget "CodeTrimmerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56085B8B28EB0BF800BFE6AB /* Debug */,
+				56085B8C28EB0BF800BFE6AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		563BB6D628EA892700101AD2 /* Build configuration list for PBXProject "CodeTrimmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
