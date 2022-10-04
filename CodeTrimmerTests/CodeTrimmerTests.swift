@@ -5,8 +5,6 @@
 //  Created by Ian Bailey on 3/10/2022.
 //
 
-// swiftlint:disable function_body_length
-// swiftlint:disable line_length
 // swiftlint:disable required_deinit
 // swiftlint:disable indentation_width
 
@@ -15,62 +13,80 @@ import XCTest
 
 final class CodeTrimmerTests: XCTestCase {
 
-    func testStripSpaces() throws {
-        var testString =
+    func testStripSpaces01() throws {
+        let testString =
         """
         single line string no spaces
         """
-        var resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, testString)
+    }
 
-        testString =
+    func testStripSpaces02() throws {
+        let testString =
         """
             single line 4 spaces
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertFalse(resultString == testString, testString)
         XCTAssertTrue(testString.dropFirst(4) == resultString, testString)
+    }
 
-        testString = ""
-        resultString = stripSpaces(testString)
+    func testStripSpaces03() throws {
+        let testString = ""
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, "Empty string")
         XCTAssertTrue(resultString.isEmpty, "Empty string")
+    }
 
-        testString =
+    func testStripSpaces04() throws {
+        let testString =
         """
             two line 4 spaces
             second line 4 spaces
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "two line 4 spaces\nsecond line 4 spaces", "Two lines 4 spaces")
+    }
 
-        testString =
+    func testStripSpaces05() throws {
+        let testString =
         """
             first line 4 spaces
               second line 6 spaces
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "first line 4 spaces\n  second line 6 spaces", "Two lines 4 & 6 spaces")
+    }
 
-        testString =
+    func testStripSpaces06() throws {
+        let testString =
         """
               first line 6 spaces
             second line 4 spaces
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == "  first line 6 spaces\nsecond line 4 spaces", "Two lines 6 & 4 spaces")
+    }
 
-        testString =
+    func testStripSpaces07() throws {
+        let testString =
         """
               first line 6 spaces
             second line 4 spaces
           third line 2 spaces
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
+        // swiftlint:disable line_length
         XCTAssertTrue(resultString == "    first line 6 spaces\n  second line 4 spaces\nthird line 2 spaces", "three lines 6 & 4 & 2 spaces")
+        // swiftlint:enable line_length
+    }
 
+    // swiftlint:disable function_body_length
+    func testStripSpaces08() throws {
         // test a hunk of code
-        testString =
+
+        let testString =
         """
         import SwiftUI
 
@@ -153,8 +169,9 @@ final class CodeTrimmerTests: XCTestCase {
 
 
         """
-        resultString = stripSpaces(testString)
+        let resultString = stripSpaces(testString)
         XCTAssertTrue(resultString == testString, "Hunk fail")
     }
+    // swiftlint:enable function_body_length
 
 }
