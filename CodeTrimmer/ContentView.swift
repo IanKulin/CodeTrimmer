@@ -44,17 +44,17 @@ struct ContentView: View {
                                 Text("A").font(.system(size: 8)),
                             maximumValueLabel:
                                 Text("A").font(.system(size: 16))) {
-                            Text("Font Size (\(Int(fontSize)))")
-                        }
-                        .frame(width: 150)
+                                    Text("Font Size (\(Int(fontSize)))")
+                                }
+                                .frame(width: 150)
                         Divider()
                         Button("Strip Spaces") {
                             codeSnippet = stripSpaces(codeSnippet)
                         }
-                            .background(.white)
-                            .foregroundColor(.primary)
-                            .cornerRadius(5)
-                            .shadow(radius: 2)
+                        .background(.white)
+                        .foregroundColor(.primary)
+                        .cornerRadius(5)
+                        .shadow(radius: 2)
                     }
                 }
                 .navigationTitle("CodeTrimmer")
